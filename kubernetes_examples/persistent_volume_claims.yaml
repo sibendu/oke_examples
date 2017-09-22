@@ -15,7 +15,7 @@ spec:
   resources:
     requests:
       storage: 50Gi
----      
+---   
 #persistent volume claim for AD2 / WordPress
 apiVersion: v1
 kind: PersistentVolumeClaim
