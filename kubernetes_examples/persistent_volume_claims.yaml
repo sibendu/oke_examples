@@ -1,0 +1,35 @@
+#persistent volume claim for AD1 / MySQL
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: mysqlclaim
+spec:
+  storageClassName: "oracle-bmc"
+  selector: 
+    matchLabels:
+      bmc-availability-domain: "PHX-AD-1"
+      # optional compartment name
+      bmc-compartment: "oke-cmprtmnt-oke-8N5nxl"
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 50Gi
+---      
+#persistent volume claim for AD2 / WordPress
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: wordpressclaim
+spec:
+  storageClassName: "oracle-bmc"
+  selector: 
+    matchLabels:
+      bmc-availability-domain: "PHX-AD-2"
+      # optional compartment name
+      bmc-compartment: "oke-cmprtmnt-oke-8N5nxl"
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 50Gi
