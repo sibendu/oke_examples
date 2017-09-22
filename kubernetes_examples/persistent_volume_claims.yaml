@@ -1,3 +1,4 @@
+---
 #persistent volume claim for AD1 / MySQL
 apiVersion: v1
 kind: PersistentVolumeClaim
