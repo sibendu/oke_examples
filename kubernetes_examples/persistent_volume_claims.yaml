@@ -1,5 +1,4 @@
 ---
-#persistent volume claim for AD1 / MySQL
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
@@ -17,7 +16,6 @@ spec:
     requests:
       storage: 50Gi
 ---
-#persistent volume claim for AD2 / WordPress
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
