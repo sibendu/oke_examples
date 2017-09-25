@@ -7,7 +7,7 @@ spec:
   selector: 
     matchLabels:
       bmc-availability-domain: "PHX-AD-1"
-      bmc-compartment: "JR"
+      #bmc-compartment: "JR"
   accessModes:
     - ReadWriteOnce
   resources:
@@ -24,7 +24,7 @@ spec:
   selector: 
     matchLabels:
       bmc-availability-domain: "PHX-AD-2"
-      bmc-compartment: "JR"
+      #bmc-compartment: "JR"
   accessModes:
     - ReadWriteOnce
   resources:
