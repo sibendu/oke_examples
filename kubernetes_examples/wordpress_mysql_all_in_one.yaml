@@ -7,7 +7,7 @@ spec:
   storageClassName: "oracle-bmc"
   selector: 
     matchLabels:
-      bmc-availability-domain: "PHX-AD-1"
+      bmc-availability-domain: "US-ASHBURN-AD-1"
   accessModes:
     - ReadWriteOnce
   resources:
@@ -23,7 +23,7 @@ spec:
   storageClassName: "oracle-bmc"
   selector: 
     matchLabels:
-      bmc-availability-domain: "PHX-AD-2"
+      bmc-availability-domain: "US-ASHBURN-AD-2"
   accessModes:
     - ReadWriteOnce
   resources:
