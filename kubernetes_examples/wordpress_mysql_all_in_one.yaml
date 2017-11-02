@@ -4,10 +4,10 @@ kind: PersistentVolumeClaim
 metadata:
   name: mysqlclaim
 spec:
-  storageClassName: "oracle-bmc"
+  storageClassName: "oci"
   selector: 
     matchLabels:
-      bmc-availability-domain: "US-ASHBURN-AD-1"
+      oci-availability-domain: "US-ASHBURN-AD-1"
   accessModes:
     - ReadWriteOnce
   resources:
@@ -20,10 +20,10 @@ kind: PersistentVolumeClaim
 metadata:
   name: wordpressclaim
 spec:
-  storageClassName: "oracle-bmc"
+  storageClassName: "oci"
   selector: 
     matchLabels:
-      bmc-availability-domain: "US-ASHBURN-AD-2"
+      oci-availability-domain: "US-ASHBURN-AD-2"
   accessModes:
     - ReadWriteOnce
   resources:
