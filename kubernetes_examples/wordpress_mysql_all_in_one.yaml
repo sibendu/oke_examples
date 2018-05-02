@@ -7,7 +7,7 @@ spec:
   storageClassName: "oci"
   selector: 
     matchLabels:
-      oci-availability-domain: "US-ASHBURN-AD-1"
+      oci-availability-domain: "PHX-AD-1"
   accessModes:
     - ReadWriteOnce
   resources:
@@ -23,7 +23,7 @@ spec:
   storageClassName: "oci"
   selector: 
     matchLabels:
-      oci-availability-domain: "US-ASHBURN-AD-2"
+      oci-availability-domain: "PHX-AD-2"
   accessModes:
     - ReadWriteOnce
   resources:
