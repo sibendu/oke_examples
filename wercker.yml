@@ -51,10 +51,18 @@ deploy-to-cluster:
         name: "Visualise Kubernetes config"
         code: cat kubernetes.yml
 
+    - script:
+        name: echo tags
+        code: |
+          echo "Docker image and tag:"
+          echo "${WERCKER_GIT_BRANCH}-${WERCKER_GIT_COMMIT}"
+          
+    - script:
+        name: Export Kubernetes Config
+        code: |
+          export KUBECONFIG="$WERCKER_ROOT/kube.config"
+        
     - kubectl:
         name: deploy to kubernetes
-        server: $KUBERNETES_MASTER
-        #username: $KUBERNETES_USERNAME
-        token: $KUBERNETES_TOKEN
         insecure-skip-tls-verify: true
         command: apply -f kubernetes.yml
